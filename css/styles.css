@@ -1,0 +1,244 @@
+@font-face {
+  font-family: "Roboto-Light-italic";
+  src: url("../fonts/Roboto-LightItalic.woff2") format("woff2"),
+    url("../fonts/Roboto-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2"),
+    url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Kaushan Script";
+  src: url("../fonts/KaushanScript-Regular.woff2") format("woff2"),
+    url("../fonts/KaushanScript-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+    url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"),
+    url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+button,
+fieldset,
+form,
+input,
+label,
+legend,
+textarea,
+select,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+a,
+b,
+i,
+u,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  font-size: 100%;
+  font-style: normal;
+  font-weight: normal;
+  line-height: inherit;
+  vertical-align: baseline;
+  background: none;
+  white-space: normal;
+}
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  /* font-family: $reg; */
+}
+
+form {
+  height: inherit;
+}
+iframe {
+  width: 100%;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+/* HEADER */
+.page-header {
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 130px;
+}
+.page-nav a {
+  text-decoration: none;
+}
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+}
+.site-logo {
+  color: #95e1d3;
+  font-size: 30px;
+  font-family: "Montserrat-Bold";
+}
+.site-navigation-list li {
+  list-style: none;
+}
+.site-navigation-list {
+  min-width: 490px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.site-navigation-item a {
+  font-size: 14px;
+  color: #95e1d3;
+  font-family: "Montserrat-Regular";
+  text-transform: uppercase;
+}
+
+/* SECTION AMAZING */
+.amazing-text {
+  text-align: center;
+  font-size: 24px;
+  font-family: "Kaushan Script";
+  color: rgb(51, 51, 51);
+  line-height: 1.2;
+  padding-bottom: 20px;
+}
+.amazing-title {
+  text-align: center;
+  font-size: 30px;
+  color: rgb(51, 51, 51);
+  font-family: "Montserrat-Bold";
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 110px;
+}
+.amazing-title::after {
+  position: relative;
+  top: 40px;
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 60px;
+  height: 3px;
+  background-color: #f38181;
+}
+.amazing-list li {
+  list-style: none;
+}
+.amazing-list-item-tile {
+  font-size: 14px;
+  font-family: "Montserrat-Regular";
+  color: rgb(51, 51, 51);
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 21px;
+}
+.amazing-list-item-text {
+  font-family: "Roboto-Regular";
+  font-size: 15px;
+
+  color: rgb(153, 153, 153);
+  line-height: 1.6;
+}
+.amazing-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.amazing-list-item {
+  position: relative;
+  width: 392px;
+  margin-bottom: 102px;
+  padding-left: 90px;
+}
+.amazing-list-item::before {
+  display: block;
+  content: "";
+  width: 89px;
+  height: 89px;
+  background-image: url(../img/ico1.png);
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  left: 0px;
+  top: -24px;
+}
