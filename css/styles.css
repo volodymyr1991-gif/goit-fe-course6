@@ -163,6 +163,25 @@ iframe {
   color: #95e1d3;
   font-size: 30px;
   font-family: "Montserrat-Bold";
+  transition: color 200ms linear;
+  animation: logo-appear 1s linear;
+}
+@keyframes logo-appear {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0px);
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.site-logo:hover {
+  color: #f38181;
 }
 .site-navigation-list li {
   list-style: none;
@@ -178,7 +197,13 @@ iframe {
   color: #95e1d3;
   font-family: "Montserrat-Regular";
   text-transform: uppercase;
+  transition: color 200ms linear;
 }
+.site-navigation-item a:hover,
+.site-navigation-item a:focus {
+  color: #f38181;
+}
+
 .site-navigation-item {
   position: relative;
 }
@@ -190,6 +215,11 @@ iframe {
   background-color: #f38181;
   position: absolute;
   bottom: -12px;
+  opacity: 0;
+  transition: 200ms linear;
+}
+.site-navigation-item:hover.about::after {
+  opacity: 1;
 }
 .service::after {
   display: block;
@@ -199,6 +229,11 @@ iframe {
   background-color: #f38181;
   position: absolute;
   bottom: -12px;
+  transition: 200ms linear;
+  opacity: 0;
+}
+.site-navigation-item:hover.service::after {
+  opacity: 1;
 }
 .work::after {
   display: block;
@@ -208,6 +243,11 @@ iframe {
   background-color: #f38181;
   position: absolute;
   bottom: -12px;
+  transition: 200ms linear;
+  opacity: 0;
+}
+.site-navigation-item:hover.work::after {
+  opacity: 1;
 }
 .blog::after {
   display: block;
@@ -217,6 +257,11 @@ iframe {
   background-color: #f38181;
   position: absolute;
   bottom: -12px;
+  transition: 200ms linear;
+  opacity: 0;
+}
+.site-navigation-item:hover.blog::after {
+  opacity: 1;
 }
 .contact::after {
   display: block;
@@ -226,6 +271,11 @@ iframe {
   background-color: #f38181;
   position: absolute;
   bottom: -12px;
+  transition: 200ms linear;
+  opacity: 0;
+}
+.site-navigation-item:hover.contact::after {
+  opacity: 1;
 }
 /* SECTION AMAZING */
 .amazing {
@@ -408,6 +458,7 @@ iframe {
   display: flex;
   justify-content: space-between;
   list-style: none;
+  position: relative;
 }
 .theam-img-name {
   font-size: 14px;
@@ -433,6 +484,9 @@ iframe {
 .socials-icon-list a {
   text-decoration: none;
 }
+.theam-list-item {
+  position: relative;
+}
 .theam-img {
   position: relative;
   z-index: 1;
@@ -440,8 +494,11 @@ iframe {
 .theam-box {
   background-color: rgb(149, 225, 211);
   position: absolute;
+  top: 0;
+  left: 0;
   width: 380px;
   height: 470px;
+  z-index: 0;
 }
 .gradient-box {
   position: absolute;
@@ -465,9 +522,31 @@ iframe {
   z-index: 2;
   opacity: 0;
 }
-.theam-list-item {
-  position: relative;
+.socials-icon-list {
+  transition: 200ms linear;
 }
+.theam-list-item:hover .theam-img {
+  transition: 200ms linear;
+  transform: translate(-10px, -10px);
+}
+.gradient-box {
+  transition: 200ms linear;
+}
+.theam-img .theam-list-item:hover.gradient-box {
+  opacity: 0.8;
+  transform: translate(-10px, -10px);
+}
+.theam-list-item:hover .socials-icon-list {
+  opacity: 1;
+}
+.theam-box:hover {
+  transition: 200ms linear;
+  transform: translate(0px, 0px);
+}
+
+/* .theam-list-item {
+  position: relative;
+} */
 .socials-icon-list {
   display: flex;
   position: absolute;
@@ -492,22 +571,39 @@ iframe {
   background-image: url(../img/facebook.png);
   background-repeat: no-repeat;
   background-position: center;
+  transition: 200ms linear;
+}
+.facebook:hover {
+  background-color: #95e1d3;
 }
 .twitter {
   background-image: url(../img/twitter.png);
   background-repeat: no-repeat;
   background-position: center;
+  transition: 200ms linear;
+}
+.twitter:hover {
+  background-color: #95e1d3;
 }
 .pinterest {
   background-image: url(../img/pinterest.png);
   background-repeat: no-repeat;
   background-position: center;
+  transition: 200ms linear;
+}
+.pinterest:hover {
+  background-color: #95e1d3;
 }
 .instagram {
   background-image: url(../img/instagram.png);
   background-repeat: no-repeat;
   background-position: center;
+  transition: 200ms linear;
 }
+.instagram:hover {
+  background-color: #95e1d3;
+}
+
 /* FOOTER */
 .footer {
   align-items: center;
@@ -517,6 +613,9 @@ iframe {
   border-top: 1px solid rgb(229, 229, 229);
 }
 .footer-text {
+  position: relative;
+  left: 24px;
+
   font-size: 14px;
   font-family: "Montserrat-Regular";
 }
