@@ -502,6 +502,8 @@ iframe {
 }
 .gradient-box {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 380px;
   height: 470px;
   background-image: -moz-linear-gradient(
@@ -532,7 +534,7 @@ iframe {
 .gradient-box {
   transition: 200ms linear;
 }
-.theam-img .theam-list-item:hover.gradient-box {
+.theam-list-item:hover .gradient-box {
   opacity: 0.8;
   transform: translate(-10px, -10px);
 }
