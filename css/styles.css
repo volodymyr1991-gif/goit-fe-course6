@@ -506,21 +506,21 @@ iframe {
   left: 0;
   width: 380px;
   height: 470px;
-  background-image: -moz-linear-gradient(
+  /* background-image: -moz-linear-gradient(
     90deg,
     rgb(252, 227, 138) 0%,
     rgb(243, 129, 129) 100%
-  );
+  ); */
   background-image: -webkit-linear-gradient(
     90deg,
     rgb(252, 227, 138) 0%,
     rgb(243, 129, 129) 100%
   );
-  background-image: -ms-linear-gradient(
+  /* background-image: -ms-linear-gradient(
     90deg,
     rgb(252, 227, 138) 0%,
     rgb(243, 129, 129) 100%
-  );
+  ); */
   z-index: 2;
   opacity: 0;
 }
